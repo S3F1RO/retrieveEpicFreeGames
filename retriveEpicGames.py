@@ -16,7 +16,6 @@ async def sendFreeEpicGames():
     channel=bot.get_channel(CHANNEL_ID)
     today=date.today()
     if today.weekday() == 4 :
-        freeGames=[]
         #Link for promotions
         epic="https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=en-FR&country=FR&allowCountries=FR"
         response = requests.get(epic, timeout=10)
@@ -30,7 +29,6 @@ async def sendFreeEpicGames():
                 if (i['catalogNs']['mappings'] != None):
                     urlName=i['catalogNs']['mappings'][0]['pageSlug']
                     url="https://store.epicgames.com/fr/p/" + urlName
-                    launcher="com.epicgames.launcher://store/fr/p/" + urlName
                     if channel:
                         await channel.send(
                             f"🎮{i['title']} est gratuit les gaaaaars !!!!\n\n"
@@ -45,4 +43,5 @@ async def on_ready():
     sendFreeEpicGames.start()  # start the loop
 
 if __name__ == '__main__':
+
     bot.run(token=token)
