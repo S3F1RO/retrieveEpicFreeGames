@@ -1,7 +1,7 @@
 #Imports
 import discord
 import requests
-import datetime
+import webserver
 from datetime import *
 from discord.ext import tasks
 import os
@@ -43,5 +43,6 @@ async def on_ready():
     sendFreeEpicGames.start()  # start the loop
 
 if __name__ == '__main__':
-
+    webserver.keep_alive()
     bot.run(token=token)
+
