@@ -8,7 +8,7 @@ To create that bot i used python and the libraries you can see under :
 ## Requirements 
 discord.py>=2.3.2  
 requests>=2.31.0  
-flask>=3.0.3  
+dotenv>=1.2.1 
 
 ## Working 
 This program uses a link given by epic Games that lists every game in promotions.
