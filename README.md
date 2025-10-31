@@ -3,6 +3,7 @@
 ## Context
 I have got a lot of things to do in my every day life and I can't go to epic games every thursdays so 
 I just wanted to create a discord bot that retrieves the games and I get them if they got my interest.  
+I used a debian server and turn it into a service so i can disable or enable it every time
 To create that bot i used python and the libraries you can see under :
 
 ## Requirements 
