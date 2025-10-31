@@ -5,7 +5,7 @@ Now you can run it BUT if u want it to function without using "&" or one of your
 
 ## Service
 ```bash
-sudo nano  /etc/systemd/system/<nameOfYourBot> :
+sudo nano /etc/systemd/system/<nameOfYourBot> :
 
 [Unit]
 Description=Retrieve Epic Games Discord Bot Service 
@@ -22,8 +22,8 @@ RestartSec=5			    #Take 5s to restart
 [Install]
 WantedBy=multi-user.target
 ```
-Restart all the services : ```sudo systemctl daemon-reload```
-Enable the bot (so it starts at boot) : ```sudo systemctl enable <nameOfYourBot>```
-Start your service : ```sudo systemctl daemon-reload <nameOfYourBot>```
-
+Restart all the services : ```sudo systemctl daemon-reload```  
+Enable the bot (so it starts at boot) : ```sudo systemctl enable <nameOfYourBot>```  
+Start your service : ```sudo systemctl daemon-reload <nameOfYourBot>```  
+  
 PS : Be sure that you've given the right permissions to the bot because i really got problems with it
